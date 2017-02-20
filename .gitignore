@@ -1,13 +1,1 @@
-# Ignore everything
-*
-node_modules/**/package.json
-
-# But not these files...
-!.gitignore
-!server.js
-!public
-!index.html
-# etc...
-
-# ...even if they are in subdirectories
-!*/
+node_modules
