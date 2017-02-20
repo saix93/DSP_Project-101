@@ -69,8 +69,10 @@ function checkCollisions(object, arrayOfObjects, newCoordinate, oldCoordinate) {
       object.x < arrayOfObjects[i].x + arrayOfObjects[i].width  && object.x + object.width  > arrayOfObjects[i].x &&
       object.y < arrayOfObjects[i].y + arrayOfObjects[i].height && object.y + object.height > arrayOfObjects[i].y
     ) {
-      // The objects are touching
+      // Los objetos se tocan
       objectCoordinate = oldCoordinate;
+      // Si los objetos se chocan, se rompe el bucle para evitar dar vueltas innecesarias
+      break;
     } else {
       objectCoordinate = newCoordinate;
     }

@@ -11,7 +11,7 @@
     height: playerHeight,
     x: playerX,
     y: playerY,
-    speed: 600
+    speed: 500
   }
 
   // staticObjects
@@ -24,4 +24,11 @@
     y: 200
   }
 
-  staticObjects.push(static1);
+  var static2 = {
+    width: 600,
+    height: 100,
+    x: 500,
+    y: 150
+  }
+
+  staticObjects.push(static1, static2);
