@@ -1,3 +1,4 @@
+/* exported DSP_Object */
 class DSP_Object {
   constructor(width, height, x, y) {
     this._width = width;

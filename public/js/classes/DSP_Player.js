@@ -1,17 +1,18 @@
+/* exported DSP_Player */
 class DSP_Player extends DSP_Object {
-  constructor(width, height, x, y, money, speed) {
+  constructor(width, height, x, y, gold, speed) {
     super(width, height, x, y);
-    this._money = money;
+    this._gold = gold;
     this._speed = speed;
   }
 
-  // Money
-    get money() {
-      return this._money;
+  // Gold
+    get gold() {
+      return this._gold;
     }
 
-    set money(val) {
-      this._money = val;
+    set gold(val) {
+      this._gold = val;
     }
 
   // Speed

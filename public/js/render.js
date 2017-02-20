@@ -5,22 +5,24 @@ function render() {
   // clear the canvas
   ctx.clear();
 
-  // Create player
+  // Se crea el terreno
+
+  // Se crea el jugador
   ctx.fillStyle = "#DDD";
   ctx.fillRect(player.x, player.y, player.width, player.height);
 
-  // Text options
+  // Se crea el HUD
   ctx.fillStyle = "rgb(250, 250, 250)";
   ctx.font = "18px Helvetica";
   ctx.textAlign = "left";
   ctx.textBaseline = "top";
 
-  // Player money
-  ctx.fillText(`Money: ${player.money}`, 32, 32);
+  // Gold
+  ctx.fillText(`Gold: ${player.gold}`, 32, 32);
 
-  // Render staticObjects
+  // Se crean los gameObjects
   ctx.fillStyle = "#0F0";
-  for (var i = 0; i < staticObjects.length; i++) {
-    ctx.fillRect(staticObjects[i].x, staticObjects[i].y, staticObjects[i].width, staticObjects[i].height);
+  for (var i = 0; i < gameObjects.length; i++) {
+    ctx.fillRect(gameObjects[i].x, gameObjects[i].y, gameObjects[i].width, gameObjects[i].height);
   }
 }

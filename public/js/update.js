@@ -14,7 +14,7 @@ function update(modifier) {
     if (player.y <= 0) {
       player.y = 0;
     } else {
-      player.y = checkCollisions(player, staticObjects, player.y, oldY);
+      player.y = checkCollisions(player, gameObjects, player.y, oldY);
     }
   }
 
@@ -26,7 +26,7 @@ function update(modifier) {
     if (player.x <= 0) {
       player.x = 0;
     } else {
-      player.x = checkCollisions(player, staticObjects, player.x, oldX);
+      player.x = checkCollisions(player, gameObjects, player.x, oldX);
     }
   }
 
@@ -39,7 +39,7 @@ function update(modifier) {
     if (player.y >= limit) {
       player.y = limit;
     } else {
-      player.y = checkCollisions(player, staticObjects, player.y, oldY);
+      player.y = checkCollisions(player, gameObjects, player.y, oldY);
     }
   }
 
@@ -52,7 +52,7 @@ function update(modifier) {
     if (player.x >= limit) {
       player.x = limit;
     } else {
-      player.x = checkCollisions(player, staticObjects, player.x, oldX);
+      player.x = checkCollisions(player, gameObjects, player.x, oldX);
     }
   }
 }
@@ -78,11 +78,11 @@ function checkCollisions(object, arrayOfObjects, newCoordinate, oldCoordinate) {
 
       if (arrayOfObjects[i].collectible) {
         arrayOfObjects.splice(i, 1);
-        player.money++;
+        player.gold++;
       }
 
       if (arrayOfObjects[i].mob) {
-        // Inicia combate
+        // TODO: Inicia combate
 
       }
     } else {
