@@ -1,10 +1,14 @@
+/* exported update */
+
 // Update game objects
 function update(modifier) {
+
+  var oldY, oldX, limit;
 
   // Se comprueba lo que el usuario está pulsando
   // El jugador está pulsando W
   if (inputAction['up']) {
-    var oldY = player.y;
+    oldY = player.y;
     player.y -= player.speed * modifier;
 
     if (player.y <= 0) {
@@ -16,7 +20,7 @@ function update(modifier) {
 
   // El jugador está pulsando A
   if (inputAction['left']) {
-    var oldX = player.x;
+    oldX = player.x;
     player.x -= player.speed * modifier;
 
     if (player.x <= 0) {
@@ -28,10 +32,10 @@ function update(modifier) {
 
   // El jugador está pulsando S
   if (inputAction['down']) {
-    var oldY = player.y;
+    oldY = player.y;
     player.y += player.speed * modifier;
 
-    var limit = canvas.height - player.height;
+    limit = canvas.height - player.height;
     if (player.y >= limit) {
       player.y = limit;
     } else {
@@ -41,10 +45,10 @@ function update(modifier) {
 
   // El jugador está pulsando D
   if (inputAction['right']) {
-    var oldX = player.x;
+    oldX = player.x;
     player.x += player.speed * modifier;
 
-    var limit = canvas.width - player.width;
+    limit = canvas.width - player.width;
     if (player.x >= limit) {
       player.x = limit;
     } else {
@@ -57,6 +61,10 @@ function update(modifier) {
 function checkCollisions(object, arrayOfObjects, newCoordinate, oldCoordinate) {
   var objectCoordinate;
   for (var i = 0; i < arrayOfObjects.length; i++) {
+    // Se comprueba si la parte superior izq del obj1 está a la izq de la parte superior derecha del obj2
+    // si la parte superior derecha del obj1 está a la derecha de la parte superior izq del obj2
+    // si la parte superior izq del obj1 está encima de la parte inferior izq del obj2
+    // si la parte inferior izq del obj1 está debajo de la parte superior izq del obj2
     if (
       object.x < arrayOfObjects[i].x + arrayOfObjects[i].width  && object.x + object.width  > arrayOfObjects[i].x &&
       object.y < arrayOfObjects[i].y + arrayOfObjects[i].height && object.y + object.height > arrayOfObjects[i].y

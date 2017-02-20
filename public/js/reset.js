@@ -1,3 +1,5 @@
+/* exported reset */
+
 // Reset the game
 function reset() {
 

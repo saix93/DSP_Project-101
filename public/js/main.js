@@ -1,3 +1,5 @@
+/* exported player */
+
 // The main game loop
 function main() {
   var now = Date.now();
@@ -10,7 +12,7 @@ function main() {
 
   // Request to do this again ASAP
   requestAnimationFrame(main);
-};
+}
 
 // Cross-browser support for requestAnimationFrame
 var w = window;

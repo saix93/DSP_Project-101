@@ -1,3 +1,5 @@
+/* exported player */
+
 // Game objects
 
   // Player

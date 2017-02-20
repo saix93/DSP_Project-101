@@ -1,3 +1,5 @@
+/* exported render */
+
 // Draw everything
 function render() {
   // clear the canvas
@@ -12,4 +14,4 @@ function render() {
   for (var i = 0; i < staticObjects.length; i++) {
     ctx.fillRect(staticObjects[i].x, staticObjects[i].y, staticObjects[i].width, staticObjects[i].height);
   }
-};
+}
