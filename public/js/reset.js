@@ -1,8 +1,7 @@
 /* exported reset */
 
-// Reset the game
+// Resetea el juego
 function reset() {
-
-  player.x = playerX;
-  player.y = playerY;
+  player.x = playerOriginalX;
+  player.y = playerOriginalY;
 }

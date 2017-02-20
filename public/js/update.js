@@ -70,9 +70,21 @@ function checkCollisions(object, arrayOfObjects, newCoordinate, oldCoordinate) {
       object.y < arrayOfObjects[i].y + arrayOfObjects[i].height && object.y + object.height > arrayOfObjects[i].y
     ) {
       // Los objetos se tocan
-      objectCoordinate = oldCoordinate;
-      // Si los objetos se chocan, se rompe el bucle para evitar dar vueltas innecesarias
-      break;
+      if (arrayOfObjects[i].collisionable) {
+        objectCoordinate = oldCoordinate;
+        // Si los objetos se chocan y el objeto es colisionable, se rompe el bucle para evitar dar vueltas innecesarias
+        break;
+      }
+
+      if (arrayOfObjects[i].collectible) {
+        arrayOfObjects.splice(i, 1);
+        player.money++;
+      }
+
+      if (arrayOfObjects[i].mob) {
+        // Inicia combate
+
+      }
     } else {
       objectCoordinate = newCoordinate;
     }

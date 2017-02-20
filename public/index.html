@@ -5,11 +5,17 @@
     <title>Pong</title>
   </head>
   <body>
+
+    <script src="js/classes/DSP_Object.js"></script>
+    <script src="js/classes/DSP_StaticObject.js"></script>
+    <script src="js/classes/DSP_Player.js"></script>
+    <script src="js/classes/DSP_Mob.js"></script>
+
     <script src="js/canvas.js"></script>
     <script>
       // Se decide donde aparece el jugador
-      var playerX = canvas.width / 2;
-      var playerY = canvas.height / 2;
+      var playerOriginalX = canvas.width / 2;
+      var playerOriginalY = canvas.height / 2;
     </script>
     <script src="js/game.js"></script>
     <script src="js/keyboard.js"></script>

@@ -1,34 +1,16 @@
-/* exported player */
+/* exported player, staticObjects */
 
-// Game objects
+// Declaración de los objetos del juego
 
   // Player
-  var playerWidth = 40;
-  var playerHeight = 80;
+  // playerWidth, playerHeight, playerX, playerY, playerMoney, playerSpeed
+  var player = new DSP_Player(40, 80, playerOriginalX, playerOriginalY, 0, 500);
 
-  var player = {
-    width: playerWidth,
-    height: playerHeight,
-    x: playerX,
-    y: playerY,
-    speed: 500
-  }
-
-  // staticObjects
-  var staticObjects = [];
-
-  var static1 = {
-    width: 200,
-    height: 300,
-    x: 200,
-    y: 200
-  }
-
-  var static2 = {
-    width: 600,
-    height: 100,
-    x: 500,
-    y: 150
-  }
-
-  staticObjects.push(static1, static2);
+  // Objetos
+  // objectWidth, objectHeight, objectX, objectY, collisionable, collectible
+  var staticObjects = [
+    new DSP_StaticObject(200, 300, 200, 200, true, false),
+    new DSP_StaticObject(100, 100, 500, 600, false, true),
+    new DSP_StaticObject(100, 100, 800, 600, false, false),
+    new DSP_StaticObject(600, 100, 500, 150, true, false)
+  ];

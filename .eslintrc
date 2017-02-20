@@ -5,16 +5,18 @@
     "jasmine": true
   },
   "globals": {
-    "inject": true,
     "canvas": true,
     "ctx": true,
     "update": true,
     "render": true,
     "reset": true,
+    "DSP_Player": true,
+    "DSP_StaticObject": true,
     "player": true,
-    "playerX": true,
-    "playerY": true,
+    "playerOriginalX": true,
+    "playerOriginalY": true,
     "inputAction": true,
-    "staticObjects": true
+    "staticObjects": true,
+    "collisionableObjects": true
   }
 }
