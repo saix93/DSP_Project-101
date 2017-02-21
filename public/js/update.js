@@ -14,7 +14,7 @@ function update(modifier) {
     if (player.y <= 0) {
       player.y = 0;
     } else {
-      player.y = checkCollisions(player, gameObjects, player.y, oldY);
+      player.y = _checkCollisions(player, gameObjects, player.y, oldY);
     }
   }
 
@@ -26,7 +26,7 @@ function update(modifier) {
     if (player.x <= 0) {
       player.x = 0;
     } else {
-      player.x = checkCollisions(player, gameObjects, player.x, oldX);
+      player.x = _checkCollisions(player, gameObjects, player.x, oldX);
     }
   }
 
@@ -39,7 +39,7 @@ function update(modifier) {
     if (player.y >= limit) {
       player.y = limit;
     } else {
-      player.y = checkCollisions(player, gameObjects, player.y, oldY);
+      player.y = _checkCollisions(player, gameObjects, player.y, oldY);
     }
   }
 
@@ -52,13 +52,13 @@ function update(modifier) {
     if (player.x >= limit) {
       player.x = limit;
     } else {
-      player.x = checkCollisions(player, gameObjects, player.x, oldX);
+      player.x = _checkCollisions(player, gameObjects, player.x, oldX);
     }
   }
 }
 
 // Función que comprueba si un objeto está chocando con otro
-function checkCollisions(object, arrayOfObjects, newCoordinate, oldCoordinate) {
+function _checkCollisions(object, arrayOfObjects, newCoordinate, oldCoordinate) {
   var objectCoordinate;
   for (var i = 0; i < arrayOfObjects.length; i++) {
     // Se comprueba si la parte superior izq del obj1 está a la izq de la parte superior derecha del obj2

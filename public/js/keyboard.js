@@ -2,14 +2,14 @@
 var inputAction = {};
 
 addEventListener("keydown", function (e) {
-  inputAction[returnNameOfKey(e.keyCode)] = true;
+  inputAction[_returnNameOfKey(e.keyCode)] = true;
 }, false);
 
 addEventListener("keyup", function (e) {
-  delete inputAction[returnNameOfKey(e.keyCode)];
+  delete inputAction[_returnNameOfKey(e.keyCode)];
 }, false);
 
-function returnNameOfKey(keyCode) {
+function _returnNameOfKey(keyCode) {
   var keyName;
 
   switch (keyCode) {

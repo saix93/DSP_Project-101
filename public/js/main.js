@@ -1,7 +1,7 @@
 /* exported player */
 
 // The main game loop
-function main() {
+function _main() {
   var now = Date.now();
   var delta = now - then;
 
@@ -11,7 +11,7 @@ function main() {
   then = now;
 
   // Request to do this again ASAP
-  requestAnimationFrame(main);
+  requestAnimationFrame(_main);
 }
 
 // Cross-browser support for requestAnimationFrame
@@ -21,4 +21,4 @@ requestAnimationFrame = w.requestAnimationFrame || w.webkitRequestAnimationFrame
 // Se inicializa el juego
 var then = Date.now();
 reset();
-main();
+_main();

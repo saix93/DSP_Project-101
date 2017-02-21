@@ -6,6 +6,7 @@
     "es6": true
   },
   "globals": {
+    "Q": true,
     "canvas": true,
     "ctx": true,
     "update": true,
@@ -14,11 +15,13 @@
     "DSP_Object": true,
     "DSP_Player": true,
     "DSP_Mob": true,
+    "DSP_Sprite": true,
     "DSP_StaticObject": true,
     "player": true,
     "playerOriginalX": true,
     "playerOriginalY": true,
     "inputAction": true,
+    "loadSprite": true,
     "gameObjects": true,
     "collisionableObjects": true
   }
