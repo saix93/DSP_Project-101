@@ -7,6 +7,7 @@
   },
   "globals": {
     "Q": true,
+    "$": true,
     "canvas": true,
     "ctx": true,
     "update": true,
@@ -22,6 +23,8 @@
     "playerOriginalY": true,
     "inputAction": true,
     "loadSprite": true,
+    "loadMap": true,
+    "terrainLoaded": true,
     "gameObjects": true,
     "collisionableObjects": true
   }

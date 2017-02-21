@@ -6,6 +6,9 @@ function render() {
   ctx.clear();
 
   // Se crea el terreno
+  if (terrainLoaded) {
+    loadMap("firstMap");
+  }
 
   // Se crea el jugador
   ctx.fillStyle = "#DDD";

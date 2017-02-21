@@ -1,12 +1,16 @@
-/* exported player, gameObjects, terrainTiles */
+/* exported player, gameObjects, terrainTiles, terrainLoaded */
 
 // Declaración de los objetos del juego.
   // Carga de sprites
-  // Tiles
-  var terrainTiles;
+  // Terreno
+  var terrainTiles, terrainLoaded = false;
   loadSprite("../assets/terrain.png", 64).then(function(data) {
     terrainTiles = data;
+    terrainLoaded = true;
   });
+
+  // Resto de sprites
+
 
   // Player
   // playerWidth, playerHeight, playerX, playerY, playerGold, playerSpeed
