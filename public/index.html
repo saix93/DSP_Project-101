@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pong</title>
+    <title>Project 101</title>
   </head>
   <body>
     <!-- Librerias externas -->
@@ -22,9 +22,11 @@
       // Se decide donde aparece el jugador
       var playerOriginalX = canvas.width / 2;
       var playerOriginalY = canvas.height / 2;
+      var currentMap = 'firstMap';
     </script>
-    <script src="js/spriteLoader.js"></script>
-    <script src="js/mapLoader.js"></script>
+    <script src="js/loaders/configLoader.js"></script>
+    <script src="js/loaders/spriteLoader.js"></script>
+    <script src="js/loaders/mapsLoader.js"></script>
     <script src="js/game.js"></script>
     <script src="js/keyboard.js"></script>
     <script src="js/reset.js"></script>

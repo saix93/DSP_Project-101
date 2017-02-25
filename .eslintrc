@@ -23,7 +23,9 @@
     "playerOriginalY": true,
     "inputAction": true,
     "loadSprite": true,
-    "loadMap": true,
+    "loadMaps": true,
+    "loadConfig": true,
+    "initGame": true,
     "terrainLoaded": true,
     "gameObjects": true,
     "collisionableObjects": true
