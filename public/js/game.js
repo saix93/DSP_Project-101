@@ -7,6 +7,8 @@ loadConfig().then(function(configFromServer) {
 
   loadMaps().then(function(mapsFromServer) {
     maps = mapsFromServer;
+
+    // TODO: Cambiar función para poder cargar todos los sprites de un array de nombres de ficheros
     loadSprite("../assets/terrain.png", 64).then(function(data) {
       terrainTiles = data;
 
